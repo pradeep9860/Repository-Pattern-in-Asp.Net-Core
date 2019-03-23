@@ -1,0 +1,1 @@
+https://localhost:44388/api/MasterCompany/GetAll?$OrderBy=Name&$Select=Name,Id

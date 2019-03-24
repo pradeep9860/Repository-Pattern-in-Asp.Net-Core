@@ -6,9 +6,10 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Autofac;
 using Microsoft.AspNet.OData.Extensions;
 using Newtonsoft.Json.Serialization;
+using Core.Formatter;
+using Core;
 
 namespace Application.Host
 {
@@ -46,7 +47,15 @@ namespace Application.Host
 
             services.AddOData();
 
-            Bootstraper.Run(services); // register dependency container
+            //services.RegisterService();
+
+            services.AddSingleton(Configuration);
+            var serviceProvider = services.BuildServiceProvider();
+            //IDatabaseFactory dbFactory = DatabaseFactories.SetFactory(Dialect.SQLServer, serviceProvider);
+
+            services.RegisterApplicationCoreModule(serviceProvider);
+
+            //Bootstraper.Run(services); // register dependency container
             //var serviceProvider = new AutofacServiceProvider(container);
         }
 
@@ -66,7 +75,7 @@ namespace Application.Host
 
             app.UseHttpsRedirection();
             app.UseStaticFiles();
-            app.UseCookiePolicy();
+            app.UseCors("corsGlobalPolicy");
 
             //app.UseHealthChecks("/healthcheck");
 

@@ -1,12 +1,12 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
 
-namespace Application.Core.Entity
+namespace Core.EntityDto
 {
-    public class MasterCompany
-    {
-        [Key]
-        public Guid Id { get; set; } 
+    public class MasterCompanyDto
+    { 
+        public Guid Id { get; set; }
+        public string INITIAL { get; set; }
         public string NAME { get; set; }
         public string ADDRESS { get; set; }
         public string TELA { get; set; }

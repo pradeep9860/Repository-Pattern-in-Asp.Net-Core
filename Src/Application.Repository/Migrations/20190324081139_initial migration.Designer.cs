@@ -4,14 +4,16 @@ using Application.Repository.EntityFramework;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace Application.Repository.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20190324081139_initial migration")]
+    partial class initialmigration
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -94,7 +96,7 @@ namespace Application.Repository.Migrations
 
                     b.HasKey("INITIAL");
 
-                    b.ToTable("Company");
+                    b.ToTable("COMPANY");
                 });
 
             modelBuilder.Entity("Core.Entity.Division", b =>
@@ -130,7 +132,7 @@ namespace Application.Repository.Migrations
 
                     b.HasKey("INITIAL");
 
-                    b.ToTable("Division");
+                    b.ToTable("DIVISION");
                 });
 #pragma warning restore 612, 618
         }

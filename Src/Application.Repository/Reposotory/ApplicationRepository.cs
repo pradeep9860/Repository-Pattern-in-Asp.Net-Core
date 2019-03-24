@@ -16,12 +16,14 @@ namespace Application
         public void Add(T entity)
         {
             _unitOfWork.Context.Set<T>().Add(entity);
+            //_unitOfWork.Commit();
         }
 
         public void Delete(T entity)
         {
             T existing = _unitOfWork.Context.Set<T>().Find(entity);
             if (existing != null) _unitOfWork.Context.Set<T>().Remove(existing);
+            //_unitOfWork.Commit();
         }
 
         public IQueryable<T> AsQueryable()
@@ -48,6 +50,7 @@ namespace Application
         {
             _unitOfWork.Context.Entry(entity).State = EntityState.Modified;
             _unitOfWork.Context.Set<T>().Attach(entity);
+            //_unitOfWork.Commit();
         }
     }
 }

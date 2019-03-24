@@ -1,12 +1,14 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+using System.Text;
 
-namespace Application.Core.Entity
-{
-    public class MasterCompany
-    {
-        [Key]
-        public Guid Id { get; set; } 
+namespace Core.EntityDto
+{ 
+    public class CompanyDto
+    { 
+        public string INITIAL { get; set; }
         public string NAME { get; set; }
         public string ADDRESS { get; set; }
         public string TELA { get; set; }
@@ -19,7 +21,7 @@ namespace Application.Core.Entity
         public string FBDATE_BS { get; set; }
         public string FEDATE_BS { get; set; }
         public int ISBRANCH { get; set; }
-        //public string ID { get; set; }
+        public string ID { get; set; }
         public string ACID { get; set; }
         public string PhiscalID { get; set; }
     }

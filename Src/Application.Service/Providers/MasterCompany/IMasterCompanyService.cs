@@ -1,4 +1,4 @@
-﻿using Application.Core.EntityDto;
+﻿using Core.EntityDto;
 using System.Collections.Generic;
 
 namespace Application.Service.Providers

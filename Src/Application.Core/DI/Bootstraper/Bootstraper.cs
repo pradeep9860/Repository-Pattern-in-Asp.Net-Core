@@ -8,9 +8,7 @@ using System.Reflection;
 
 namespace Core.DI
 {
-
-
-
+ 
     public class Bootstrapper : IBootstrapper
     {
         private readonly IServiceCollection _serviceCollection;
@@ -103,7 +101,6 @@ namespace Core.DI
             // GlobalConfiguration.Configuration.DependencyResolver = new AutofacWebApiDependencyResolver(Container);
 
         }
-
-
+         
     } 
 }

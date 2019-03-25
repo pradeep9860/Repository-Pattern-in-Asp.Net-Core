@@ -1,0 +1,63 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.css";
+@import "~font-awesome/css/font-awesome.css";
+
+/* body {
+  background: url("./assets/maptrackerillustraton1.jpg");
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-repeat: no-repeat;
+} */
+/* 
+body {
+  background: gray url("./assets/maptrackerillustraton1.jpg") repeat 0 0;
+  width: 100%;
+  margin: 0;
+  text-align: center;
+  box-sizing: border-box;
+  -webkit-animation: slide 60s linear infinite;
+}
+
+@-webkit-keyframes slide {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: -1140px 0;
+  }
+} */
+
+/* body {
+  color: #fff;
+  text-align: center;
+  background-image: url("./assets/maptrackerillustraton1.jpg");
+  background-repeat: repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  font-size: 12px;
+  font-family: "Dancing Script", cursive;
+  -webkit-animation: backgroundScroll 15s linear 1;
+  -webkit-animation-fill-mode: forwards;
+  animation: backgroundScroll 15s linear 1;
+  animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes backgroundScroll {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: -180px 0px;
+  }
+}
+
+@keyframes backgroundScroll {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: -180px 0px;
+  }
+} */

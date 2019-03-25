@@ -1,13 +1,14 @@
 ﻿using Core.DI;
+using Core.Modules;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using System;
 
 namespace Core
 {
-    public static class ApplicationCoreModule
+    public static class ApplicationCore
     {
-        public static IServiceCollection RegisterApplicationCoreModule(this IServiceCollection services,
+        public static IServiceCollection RegisterApplicationCore(this IServiceCollection services,
             IServiceProvider serviceProvider)
         {
             var configuration = serviceProvider.GetService<IConfiguration>();
@@ -59,9 +60,12 @@ namespace Core
             //{
 
             //});
-            //TODO:: allow in start up
-
+            //TODO:: register all dependencies
             new Bootstrapper(services, serviceProvider);
+
+            //register module
+            new ModuleBootstrapper(services, serviceProvider);
+
             // services.AddSingleton(configuration);
 
             // services.TryAddSingleton<ICache, DefaultCache>();

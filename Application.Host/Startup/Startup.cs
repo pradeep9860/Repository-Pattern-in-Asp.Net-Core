@@ -53,7 +53,7 @@ namespace Application.Host
             var serviceProvider = services.BuildServiceProvider();
             //IDatabaseFactory dbFactory = DatabaseFactories.SetFactory(Dialect.SQLServer, serviceProvider);
 
-            services.RegisterApplicationCoreModule(serviceProvider);
+            services.RegisterApplicationCore(serviceProvider);
 
             //Bootstraper.Run(services); // register dependency container
             //var serviceProvider = new AutofacServiceProvider(container);
